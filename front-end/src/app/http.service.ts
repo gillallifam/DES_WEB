@@ -29,8 +29,6 @@ export class HttpService {
                     console.log(element);
                 });
             })
-
-
     }
 
     cadastrarUsuario(usuario) {
@@ -40,12 +38,12 @@ export class HttpService {
             this.getUsuarios();
             this.location.back();
         });
-
     }
 
     atualizarUsuario(usuario) {
-        //console.log("inspecao:"+this.baseURL+'inserir');
-        this.http.put(this.baseURL+'/'+usuario._id, {nome: usuario.nome, senha:usuario.senha}).subscribe((data: any) => {
+        this.http.put(this.baseURL+'/'+usuario._id,
+         {nome: usuario.nome, senha:usuario.senha})
+        .subscribe((data: any) => {
             console.log("data resposta: " + data);
             this.getUsuarios();
             this.location.back();
@@ -53,11 +51,9 @@ export class HttpService {
 
     }
     deletarUsuario(usuario) {
-
         console.log("usuario" + JSON.stringify(usuario));
         this.http.request('delete', this.baseURL+'/'+usuario._id, { body: usuario })
             .subscribe((data: any) => {
-                /* console.log("data resposta:"+JSON.stringify(data));*/
                 this.getUsuarios();
             })
     }

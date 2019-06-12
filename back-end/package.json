@@ -10,9 +10,11 @@
   "author": "Sandro Haiden",
   "license": "ISC",
   "dependencies": {
+    "@types/morgan": "^1.7.35",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.5.12",
+    "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
   }
 }

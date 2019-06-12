@@ -9,7 +9,8 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { AtualizarComponent } from './atualizar/atualizar.component';
-import { AppRoutingModule } from './app-routing.module'; // <-- NgModel lives here
+import { AppRoutingModule } from './app-routing.module';
+import { CadusuarioComponent } from './cadusuario/cadusuario.component'; // <-- NgModel lives here
 
 
 
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module'; // <-- NgModel lives he
     AppComponent,
     ListarComponent,
     CadastrarComponent,
-    AtualizarComponent
+    AtualizarComponent,
+    CadusuarioComponent
   ],
   imports: [
     BrowserModule,
